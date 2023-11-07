@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>To do list</title>
+  </head>
+  <body class="bg-green-100">
+    <header class="mt-10 p-4 max-w-lg mx-auto bg-blue-500 text-white">
+      <h2 class="text-center text-3xl">
+        To-Do List
+        <img
+          src="/images/Todoimage.jpeg"
+          alt="to-do image"
+          class="w-14 ml-4"
+      </h2>
+    </header>
+    <main class="bg-white shadow-lg max-w-lg mx-auto p-2">
+      <form class="flex flex-col sm:flex-row justify-between">
+        <input
+          type="text"
+          name="user-input"
+          placeholder="What are you doing today?"
+          class="outline-none border py-2 px-4 m-2 sm:w-[80%] rounded-md"
+          id="todo_input"
+        />
+        <button
+          onclick="create_Todo(event)"
+          class="bg-blue-500 text-white py-2 px-4 rounded-md m-2"
+          id="add_todo_btn"
+        >
+          Add&nbsp;Task
+        </button>
+        <button
+          onclick="updateTodo(event)"
+          class="hidden bg-grey text-white py-2 px-4 rounded-md m-2"
+          id="update_todo_btn"
+        >
+          Update&nbsp;Task
+        </button>
+      </form>
+      <span id="form_message" class="hidden block text-left p-2"></span>
+      <div id="task_log" class="bg-green-50 rounded-md p-2"></div>
+    </main>
+
+    <script src="utility.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
